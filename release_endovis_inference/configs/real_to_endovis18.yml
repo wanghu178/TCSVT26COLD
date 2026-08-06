@@ -1,0 +1,22 @@
+name: real_to_endovis18
+model_type: ImageCleanModel
+scale: 1
+num_gpu: 1
+
+datasets:
+  val:
+    name: EndoVis18
+    dataroot_lq: datasets/EndoVis18/low
+    dataroot_gt: datasets/EndoVis18/high
+
+network_g:
+  type: RetinexFormer
+  in_channels: 3
+  out_channels: 3
+  n_feat: 40
+  stage: 1
+  num_blocks: [1, 2, 2]
+
+path:
+  pretrain_network_g: weights/real_to_endovis18.pth
+  strict_load_g: true
