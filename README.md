@@ -54,8 +54,7 @@ datasets/
     `-- high/
 ```
 
-Supported image extensions are PNG, JPG/JPEG, TIF/TIFF, and BMP. Dataset files
-are not included.
+Supported image extensions are PNG, JPG/JPEG, TIF/TIFF, and BMP. Datasets are available via [Baidu Netdisk](https://pan.baidu.com/s/1keO0QbOkboKY9ZL0WWvJfg) (access code: `bjws`).
 
 ## Evaluation
 
