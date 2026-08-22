@@ -20,13 +20,13 @@ To address whether recent unified (all-in-one) image restoration frameworks can 
 
 | Method               | Venue   | Real → EndoVis17 PSNR↑ | Real → EndoVis17 SSIM↑ | Real → EndoVis18 PSNR↑ | Real → EndoVis18 SSIM↑ |
 | -------------------- | ------- | ---------------------- | ---------------------- | ---------------------- | ---------------------- |
-| DiffUIR              | CVPR'24 | 15.45                  | 0.4890                 | XX.XX                  | 0.XXXX                 |
-| AdaIR                | ICLR'25 | 13.86                  | 0.4122                 | 16.17                  | 0.5681                 |
+| DiffUIR              | CVPR'24 | 15.45                  | 0.4890                 | 16.17                  | 0.5681                 |
+| AdaIR                | ICLR'25 | 13.86                  | 0.4122                 | 12.83                  | 0.4222                 |
 | DFPIR                | CVPR'25 | 13.77                  | 0.5145                 | 14.13                  | 0.5788                 |
 | **Ours (COLD)**      | -       | **21.25**              | **0.8710**             | **20.18**              | **0.8613**             |
 | Target only (Oracle) | -       | 36.70                  | 0.9683                 | 33.72                  | 0.9626                 |
 
-Although the compared unified restoration methods are trained on diverse degradation types and large-scale datasets, they still suffer from severe performance degradation when transferred from daily scenes to unseen medical endoscopic scenes, with PSNR values of only 13.77–16.17 dB. Their performance is comparable to that of the non-adapted source model (12.23/12.62 dB on EndoVis17/EndoVis18) and falls far behind our adapted model (21.25/20.18 dB). This is because existing unified restoration methods are trained with full supervision on fixed datasets and degradation types, and thus lack the ability to adapt to unseen domains with large distribution shifts. These results demonstrate that broader training-data coverage cannot replace explicit domain adaptation, which further substantiates the necessity of the proposed source-free debiasing strategy.
+Although the compared unified restoration methods are trained on diverse degradation types and large-scale datasets, they still suffer from severe performance degradation when transferred from daily scenes to unseen medical endoscopic scenes, with PSNR values of only 13.77–16.17 dB. Their performance is comparable to that of the non-adapted source model and falls far behind our adapted model. This is because existing unified restoration methods are trained with full supervision on fixed datasets and degradation types, and thus lack the ability to adapt to unseen domains with large distribution shifts. These results demonstrate that broader training-data coverage cannot replace explicit domain adaptation, which further substantiates the necessity of the proposed source-free debiasing strategy.
 
 
 
