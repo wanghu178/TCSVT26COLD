@@ -2,6 +2,14 @@
 
 **Note:** As the paper is currently under major revision (TCSVT 26), only the inference code is released. The complete training code will be made publicly available upon acceptance.
 
+# More experimental results.
+
+<img title="" src=".\structured_noise_responses.png" alt="" width="626">
+
+Fig. A1: 
+
+
+
 # EndoVis Inference Code
 
 This package contains the testing code and adapted RetinexFormer checkpoints for
