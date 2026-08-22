@@ -4,9 +4,15 @@
 
 # More experimental results.
 
-<img title="" src=".\structured_noise_responses.png" alt="" width="626">
+<img title="" src=".\structured_noise_responses.png" alt="" width="626" data-align="center">
 
 Fig. A1: Responses of three source-domain enhancement models to different low-light Poisson-noise inputs. The different models produce markedly different colors, brightness levels, and textures, indicating that the enhancement results are significantly influenced by source-domain priors.
+
+
+
+## Supplementary Comparison with Unified Image Restoration Methods
+
+To address whether recent unified (all-in-one) image restoration frameworks can handle the cross-domain low-light enhancement problem studied in our paper, we consider the Real → EndoVis17 and Real → EndoVis18 transfer scenarios, i.e., transferring a model pretrained on LOL-v2-real (daily scenes) to medical endoscopic scenes. We evaluate three representative open-source methods — DiffUIR (CVPR'24), AdaIR (ICLR'25), and DFPIR (CVPR'25) — and compare them with our adapted model (COLD, built upon Retinexformer) as well as two reference baselines: the non-adapted source model (Source only) and the model trained with labeled target-domain data (Target only, serving as the oracle). All unified methods are directly deployed with their official pretrained weights , without any fine-tuning or adaptation, i.e., the source-only setting, which is consistent with the deployment of our source model pretrained on LOL-v2-real. The low-light test images of EndoVis17 and EndoVis18 are fed into each model, and PSNR and SSIM are computed against the corresponding normal-light references on the full test sets, following exactly the same evaluation protocol as in the manuscript.
 
 
 
@@ -14,11 +20,17 @@ Fig. A1: Responses of three source-domain enhancement models to different low-li
 
 | Method               | Venue   | Real → EndoVis17 PSNR↑ | Real → EndoVis17 SSIM↑ | Real → EndoVis18 PSNR↑ | Real → EndoVis18 SSIM↑ |
 | -------------------- | ------- | ---------------------- | ---------------------- | ---------------------- | ---------------------- |
-| InstructIR           | ICLR'24 | XX.XX                  | 0.XXXX                 | XX.XX                  | 0.XXXX                 |
-| AdaIR                | ICLR'25 | 13.86                  | 0.4122                 | 12.82                  | 0.4222                 |
-| DFPIR                | CVPR'25 | XX.XX                  | 0.XXXX                 | XX.XX                  | 0.XXXX                 |
+| DiffUIR              | CVPR'24 | 15.45                  | 0.4890                 | XX.XX                  | 0.XXXX                 |
+| AdaIR                | ICLR'25 | 13.86                  | 0.4122                 | 16.17                  | 0.5681                 |
+| DFPIR                | CVPR'25 | 13.77                  | 0.5145                 | 14.13                  | 0.5788                 |
 | **Ours (COLD)**      | -       | **21.25**              | **0.8710**             | **20.18**              | **0.8613**             |
 | Target only (Oracle) | -       | 36.70                  | 0.9683                 | 33.72                  | 0.9626                 |
+
+Although the compared unified restoration methods are trained on diverse degradation types and large-scale datasets, they still suffer from severe performance degradation when transferred from daily scenes to unseen medical endoscopic scenes, with PSNR values of only 13.77–16.17 dB. Their performance is comparable to that of the non-adapted source model (12.23/12.62 dB on EndoVis17/EndoVis18) and falls far behind our adapted model (21.25/20.18 dB). This is because existing unified restoration methods are trained with full supervision on fixed datasets and degradation types, and thus lack the ability to adapt to unseen domains with large distribution shifts. These results demonstrate that broader training-data coverage cannot replace explicit domain adaptation, which further substantiates the necessity of the proposed source-free debiasing strategy.
+
+
+
+
 
 # EndoVis Inference Code
 
