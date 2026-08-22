@@ -10,7 +10,15 @@ Fig. A1: Responses of three source-domain enhancement models to different low-li
 
 
 
+**Table A1. Comparison with recent unified image restoration methods on Real → EndoVis17 and Real → EndoVis18. All unified methods are directly deployed with their official pretrained weights.**
 
+| Method               | Venue   | Real → EndoVis17 PSNR↑ | Real → EndoVis17 SSIM↑ | Real → EndoVis18 PSNR↑ | Real → EndoVis18 SSIM↑ |
+| -------------------- | ------- | ---------------------- | ---------------------- | ---------------------- | ---------------------- |
+| InstructIR           | ICLR'24 | XX.XX                  | 0.XXXX                 | XX.XX                  | 0.XXXX                 |
+| AdaIR                | ICLR'25 | 13.86                  | 0.4122                 | 12.82                  | 0.4222                 |
+| DFPIR                | CVPR'25 | XX.XX                  | 0.XXXX                 | XX.XX                  | 0.XXXX                 |
+| **Ours (COLD)**      | -       | **21.25**              | **0.8710**             | **20.18**              | **0.8613**             |
+| Target only (Oracle) | -       | 36.70                  | 0.9683                 | 33.72                  | 0.9626                 |
 
 # EndoVis Inference Code
 
