@@ -30,7 +30,16 @@ Although the compared unified restoration methods are trained on diverse degrada
 
 
 
+## temp
 
+**Table A2. Further extended evaluation of perceptual quality, color fidelity, and downstream segmentation performance in the medical endoscopy scenario.**
+
+| Setting               | Method             | LPIPS↓        | $\Delta E$ ↓ | IoU↑ (%)     |
+| --------------------- | ------------------ | -------------:| ------------:| ------------:|
+| Synthetic → EndoVis17 | Source only        | 0.3104        | 19.82        | 24.75        |
+|                       | SAME               | 0.2907        | 16.77        | 0.70         |
+|                       | **Ours**           | **0.2835**    | **10.32**    | **33.89**    |
+|                       | <u>Target only</u> | <u>0.0270</u> | <u>1.52</u>  | <u>73.91</u> |
 
 # EndoVis Inference Code
 
