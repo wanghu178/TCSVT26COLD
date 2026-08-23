@@ -166,6 +166,12 @@ The enhancement backbone and the original testing procedure are based on
   booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
   year={2024}
 }
+@inproceedings{cui2025adair,
+title={Ada{IR}: Adaptive All-in-One Image Restoration via Frequency Mining and Modulation},
+author={Yuning Cui and Syed Waqas Zamir and Salman Khan and Alois Knoll and Mubarak Shah and Fahad Shahbaz Khan},
+booktitle={The Thirteenth International Conference on Learning Representations},
+year={2025}
+}
 
 @inproceedings{tian2025degradation,
   title={Degradation-Aware Feature Perturbation for All-in-One Image Restoration},
