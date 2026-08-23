@@ -6,7 +6,7 @@
 
 <img title="" src=".\structured_noise_responses.png" alt="" width="626" data-align="center">
 
-Fig. A1: Responses of three source-domain enhancement models to different low-light Poisson-noise inputs. The different models produce markedly different colors, brightness levels, and textures, indicating that the enhancement results are significantly influenced by source-domain priors.
+
 
 ## **Additional Comparison Methods**
 
