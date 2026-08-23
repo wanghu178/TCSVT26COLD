@@ -17,7 +17,7 @@ Fig. A1: Responses of three source-domain enhancement models to different low-li
 **Table A1. Comparison with recent unified image restoration methods on Real → EndoVis17 and Real → EndoVis18. All unified methods are directly deployed with their official pretrained weights.**
 
 | Method               | Venue   | Real → EndoVis17 PSNR↑ | Real → EndoVis17 SSIM↑ | Real → EndoVis18 PSNR↑ | Real → EndoVis18 SSIM↑ |
-| -------------------- | ------- | ---------------------- | ---------------------- | ---------------------- | ---------------------- |
+|:--------------------:|:-------:|:----------------------:|:----------------------:|:----------------------:|:----------------------:|
 | Multinex             | CVPR'26 | 15.29                  | 0.5409                 | 15.31                  | 0.5583                 |
 | DiffUIR              | CVPR'24 | 15.45                  | 0.4890                 | 16.17                  | 0.5681                 |
 | AdaIR                | ICLR'25 | 13.86                  | 0.4122                 | 12.83                  | 0.4222                 |
@@ -34,7 +34,7 @@ Although the compared unified restoration methods are trained on diverse degrada
 **Table A2. Further extended evaluation of perceptual quality, color fidelity, and downstream segmentation performance in the medical endoscopy scenario.**
 
 | Setting               | Method             | LPIPS↓        | $\Delta E$ ↓ | IoU↑ (%)     |
-| --------------------- | ------------------ | -------------:| ------------:| ------------:|
+|:---------------------:|:------------------:|:-------------:|:------------:|:------------:|
 | Synthetic → EndoVis17 | Source only        | 0.3104        | 19.82        | 24.75        |
 |                       | SAME               | 0.2907        | 16.77        | 0.70         |
 |                       | **Ours**           | **0.2835**    | **10.32**    | **33.89**    |
