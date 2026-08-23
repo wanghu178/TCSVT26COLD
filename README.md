@@ -27,7 +27,7 @@ Although the compared unified restoration methods are trained on diverse degrada
 
 
 
-## temp
+## Extended experiments on Synthetic → EndoVis17
 
 **Table A2. Further extended evaluation of perceptual quality, color fidelity, and downstream segmentation performance in the medical endoscopy scenario.**
 
