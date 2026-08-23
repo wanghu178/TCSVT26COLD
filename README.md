@@ -8,18 +8,17 @@
 
 Fig. A1: Responses of three source-domain enhancement models to different low-light Poisson-noise inputs. The different models produce markedly different colors, brightness levels, and textures, indicating that the enhancement results are significantly influenced by source-domain priors.
 
+## **Additional Comparison Methods**
 
+**Compared with 2026 methods**. We have added a comparison with Multinex, a supervised method published at CVPR 2026. As shown in Tab. A1, the latest supervised methods still fail to generalize well to unseen target domains.
 
-## Supplementary Comparison with Unified Image Restoration Methods
-
-To address whether recent unified (all-in-one) image restoration frameworks can handle the cross-domain low-light enhancement problem studied in our paper, we consider the Real → EndoVis17 and Real → EndoVis18 transfer scenarios, i.e., transferring a model pretrained on LOL-v2-real (daily scenes) to medical endoscopic scenes. We evaluate three representative open-source methods — DiffUIR (CVPR'24), AdaIR (ICLR'25), and DFPIR (CVPR'25) — and compare them with our adapted model (COLD, built upon Retinexformer) as well as two reference baselines: the non-adapted source model (Source only) and the model trained with labeled target-domain data (Target only, serving as the oracle). All unified methods are directly deployed with their official pretrained weights , without any fine-tuning or adaptation, i.e., the source-only setting, which is consistent with the deployment of our source model pretrained on LOL-v2-real. The low-light test images of EndoVis17 and EndoVis18 are fed into each model, and PSNR and SSIM are computed against the corresponding normal-light references on the full test sets, following exactly the same evaluation protocol as in the manuscript.
-
-
+**Supplementary comparison with unified image restoration methods.** To address whether recent unified (all-in-one) image restoration frameworks can handle the cross-domain low-light enhancement problem studied in our paper, we consider the Real → EndoVis17 and Real → EndoVis18 transfer scenarios, i.e., transferring a model pretrained on LOL-v2-real (daily scenes) to medical endoscopic scenes. We evaluate three representative open-source methods — DiffUIR (CVPR'24), AdaIR (ICLR'25), and DFPIR (CVPR'25) — and compare them with our adapted model (COLD, built upon Retinexformer) as well as two reference baselines: the non-adapted source model (Source only) and the model trained with labeled target-domain data (Target only, serving as the oracle). All unified methods are directly deployed with their official pretrained weights , without any fine-tuning or adaptation, i.e., the source-only setting, which is consistent with the deployment of our source model pretrained on LOL-v2-real. The low-light test images of EndoVis17 and EndoVis18 are fed into each model, and PSNR and SSIM are computed against the corresponding normal-light references on the full test sets, following exactly the same evaluation protocol as in the manuscript.
 
 **Table A1. Comparison with recent unified image restoration methods on Real → EndoVis17 and Real → EndoVis18. All unified methods are directly deployed with their official pretrained weights.**
 
 | Method               | Venue   | Real → EndoVis17 PSNR↑ | Real → EndoVis17 SSIM↑ | Real → EndoVis18 PSNR↑ | Real → EndoVis18 SSIM↑ |
 | -------------------- | ------- | ---------------------- | ---------------------- | ---------------------- | ---------------------- |
+| Multinex             | CVPR'26 | 15.29                  | 0.5409                 | 15.31                  | 0.5583                 |
 | DiffUIR              | CVPR'24 | 15.45                  | 0.4890                 | 16.17                  | 0.5681                 |
 | AdaIR                | ICLR'25 | 13.86                  | 0.4122                 | 12.83                  | 0.4222                 |
 | DFPIR                | CVPR'25 | 13.77                  | 0.5145                 | 14.13                  | 0.5788                 |
