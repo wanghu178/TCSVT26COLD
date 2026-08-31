@@ -10,7 +10,9 @@
 
 **Compared with 2026 methods**. We have added a comparison with Multinex, a supervised method published at CVPR 2026. As shown in Tab. A1, the latest supervised methods still fail to generalize well to unseen target domains.
 
-**Supplementary comparison with unified image restoration methods.** To address whether recent unified (all-in-one) image restoration frameworks can handle the cross-domain low-light enhancement problem studied in our paper, we consider the Real → EndoVis17 and Real → EndoVis18 transfer scenarios, i.e., transferring a model pretrained on LOL-v2-real (daily scenes) to medical endoscopic scenes. We evaluate three representative open-source methods — DiffUIR (CVPR'24), AdaIR (ICLR'25), and DFPIR (CVPR'25) — and compare them with our adapted model (COLD, built upon Retinexformer) as well as two reference baselines: the non-adapted source model (Source only) and the model trained with labeled target-domain data (Target only, serving as the oracle). All unified methods are directly deployed with their official pretrained weights , without any fine-tuning or adaptation, i.e., the source-only setting, which is consistent with the deployment of our source model pretrained on LOL-v2-real. The low-light test images of EndoVis17 and EndoVis18 are fed into each model, and PSNR and SSIM are computed against the corresponding normal-light references on the full test sets, following exactly the same evaluation protocol as in the manuscript.
+**Supplementary comparison with unified image restoration methods.** To address whether recent unified (all-in-one) image restoration frameworks can handle the cross-domain low-light enhancement problem studied in our paper, we consider the Real → EndoVis17 and Real → EndoVis18 transfer scenarios, i.e., transferring a model pretrained on LOL-v2-real (daily scenes) to medical endoscopic scenes. We evaluate three representative open-source methods — DiffUIR (CVPR'24), AdaIR (ICLR'25), and DFPIR (CVPR'25) — and compare them with our adapted model (COLD, built upon Retinexformer) as well as two reference baselines: the non-adapted source model (Source only) and the model trained with labeled target-domain data (Target only, serving as the oracle). 
+
+All unified methods are directly deployed with their official pretrained weights , without any fine-tuning or adaptation, i.e., the source-only setting, which is consistent with the deployment of our source model pretrained on LOL-v2-real. The low-light test images of EndoVis17 and EndoVis18 are fed into each model, and PSNR and SSIM are computed against the corresponding normal-light references on the full test sets, following exactly the same evaluation protocol as in the manuscript.
 
 **Table A1. Comparison with recent supervised and unified image restoration methods on Real → EndoVis17 and Real → EndoVis18. All unified methods are directly deployed with their official pretrained weights.**
 
@@ -24,8 +26,6 @@
 | Target only (Oracle) | -       | 36.70                  | 0.9683                 | 33.72                  | 0.9626                 |
 
 Although the compared unified restoration methods are trained on diverse degradation types and large-scale datasets, they still suffer from severe performance degradation when transferred from daily scenes to unseen medical endoscopic scenes, with PSNR values of only 13.77–16.17 dB. Their performance is comparable to that of the non-adapted source model and falls far behind our adapted model. This is because existing unified restoration methods are trained with full supervision on fixed datasets and degradation types, and thus lack the ability to adapt to unseen domains with large distribution shifts. These results demonstrate that broader training-data coverage cannot replace explicit domain adaptation, which further substantiates the necessity of the proposed source-free debiasing strategy.
-
-
 
 ## Extended experiments on Synthetic → EndoVis17
 
