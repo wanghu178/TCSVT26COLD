@@ -1,6 +1,8 @@
 # Source-Free Low-Light Image Enhancement via Counterfactual-Inspired and Lighting Debiasing (Under review)
 
-**Note:** As the paper is currently under ~~major revision~~ minor revision (TCSVT 26), only the inference code is released. The complete training code will be made publicly available upon acceptance.
+**~~Note:** As the paper is currently under major revision minor revision (TCSVT 26), only the inference code is released. The complete training code will be made publicly available upon acceptance.~~
+
+The training code and some interesting observations are being organized.
 
 # More experimental results.
 
