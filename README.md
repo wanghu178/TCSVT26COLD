@@ -4,6 +4,10 @@
 
 The training code and some interesting observations are being organized.
 
+# Observations
+
+
+
 # More experimental results.
 
 <img title="" src=".\structured_noise_responses.png" alt="" width="626" data-align="center">
